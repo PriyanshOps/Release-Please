@@ -13,7 +13,7 @@ jobs:
         id: release                                
         with:
           release-type: simple
- 
+
       - name: Trigger Testd Workflow
         run: |
           curl -XPOST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
