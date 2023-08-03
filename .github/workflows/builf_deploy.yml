@@ -7,7 +7,6 @@ on:
   push:
     tags:
       - 'v*'
-  workflow_dispatch:
 
 jobs:
   build:
@@ -23,5 +22,3 @@ jobs:
 
       - name: test Release
         run: |
-          echo "test Release...asfkjsdgad " 
-           
