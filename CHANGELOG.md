@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.8](https://github.com/priyanshunamdev6/Release-Please/compare/v1.0.7...v1.0.8) (2023-08-03)
+
+
+### Bug Fixes
+
+* test update release ([c95bbe3](https://github.com/priyanshunamdev6/Release-Please/commit/c95bbe32f7c372aa49dd22079c67cc50567ff59a))
+
 ### [1.0.7](https://github.com/priyanshunamdev6/Release-Please/compare/v1.0.6...v1.0.7) (2023-08-03)
 
 
