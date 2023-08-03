@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://github.com/priyanshunamdev6/Release-Please/compare/v1.0.1...v1.0.2) (2023-08-03)
+
+
+### Bug Fixes
+
+* add permission cicd ([ca3dfe7](https://github.com/priyanshunamdev6/Release-Please/commit/ca3dfe766bdf308368ea6c9f08a03a7277abeb7d))
+
 ### [1.0.1](https://github.com/priyanshunamdev6/Release-Please/compare/v1.0.0...v1.0.1) (2023-08-03)
 
 
