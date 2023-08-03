@@ -26,3 +26,4 @@ jobs:
 
       - name: test Release
         run: |
+            echo "hello release please"
