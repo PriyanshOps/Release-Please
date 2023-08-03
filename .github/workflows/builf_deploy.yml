@@ -4,9 +4,9 @@
 name: Build & Deploy PROD
 
 on:
-    release:
-        types: [published]
-  
+    repository_dispatch:
+        types:
+          - release_created
     
 #   push:
 #     tags:
