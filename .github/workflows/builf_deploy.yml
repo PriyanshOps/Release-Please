@@ -4,14 +4,9 @@
 name: Build & Deploy PROD
 
 on:
-    release:
-      types: [created]
+  repository_dispatch:
+    types: [release_created]
   
-    
-#   push:
-#     tags:
-#       - 'v*'
-
 jobs:
   build:
     name: build_deploy_prod
