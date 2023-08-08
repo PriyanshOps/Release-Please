@@ -1,0 +1,27 @@
+# Copyright 2020 ChainSafe Systems
+# SPDX-License-Identifier: LGPL-3.0-only
+
+name: Build & Deploy
+
+on:
+  workflow_call:
+    inputs:
+      tag:
+        required: true
+        type: string
+  
+jobs:
+  build:
+    name: build_deploy
+    runs-on: ubuntu-latest
+    permissions:
+          id-token: write
+          contents: write
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: test Release
+        run: |
+            echo ${{ inputs.tag }}

@@ -1,23 +1,30 @@
-# name: Release Staging
-# on:
-#   push:
-#     branches:
-#       - 'main'
+# Copyright 2020 ChainSafe Systems
+# SPDX-License-Identifier: LGPL-3.0-only
+
+name: Release Staging
+on:
+  push:
+    default-branch:
+      - 'fix/test-release-2'
         
-# jobs:
-#   release-please:
-#     permissions: write-all
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: GoogleCloudPlatform/release-please-action@v3.1
-#         id: release                                
-#         with:
-#           release-type: go
-        
-#       - name: Trigger Build & Deploy Workflow
-#         run: |
-#           echo "Dispatching 'release_created' event..."
-#           curl -X POST -H "Authorization: token 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" \
-#             -H "Accept: application/vnd.github.everest-preview+json" \
-#             "https://api.github.com/repos/${{ github.repository }}/dispatches" \
-#             -d '{"event_type": "release_created"}'
+jobs:
+  release:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v3.1
+        id: release                                
+        with:
+          release-type: go
+          token: ${{secrets.GITHUB_TOKEN}}
+          default-branch: fix/test-release-2
+
+  deploy-services:
+    needs: release
+    uses: priyanshunamdev6/Release-Please/.github/workflows/build_deploy.yml@fix/test-release-2
+    if: ${{ needs.release.outputs.release_created }}
+    with:
+      tag: ${{ needs.release.outputs.tag }}
