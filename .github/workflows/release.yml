@@ -1,23 +1,23 @@
-name: Release Staging
-on:
-  push:
-    branches:
-      - 'main'
+# name: Release Staging
+# on:
+#   push:
+#     branches:
+#       - 'main'
         
-jobs:
-  release-please:
-    permissions: write-all
-    runs-on: ubuntu-latest
-    steps:
-      - uses: GoogleCloudPlatform/release-please-action@v3.1
-        id: release                                
-        with:
-          release-type: go
+# jobs:
+#   release-please:
+#     permissions: write-all
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: GoogleCloudPlatform/release-please-action@v3.1
+#         id: release                                
+#         with:
+#           release-type: go
         
-      - name: Trigger Build & Deploy Workflow
-        run: |
-          echo "Dispatching 'release_created' event..."
-          curl -X POST -H "Authorization: token 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" \
-            -H "Accept: application/vnd.github.everest-preview+json" \
-            "https://api.github.com/repos/${{ github.repository }}/dispatches" \
-            -d '{"event_type": "release_created"}'
+#       - name: Trigger Build & Deploy Workflow
+#         run: |
+#           echo "Dispatching 'release_created' event..."
+#           curl -X POST -H "Authorization: token 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" \
+#             -H "Accept: application/vnd.github.everest-preview+json" \
+#             "https://api.github.com/repos/${{ github.repository }}/dispatches" \
+#             -d '{"event_type": "release_created"}'
