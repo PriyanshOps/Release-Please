@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/PriyanshOps/Release-Please/compare/v1.0.9...v1.1.0) (2024-01-18)
+
+
+### Features
+
+* release please ([106cf41](https://github.com/PriyanshOps/Release-Please/commit/106cf41f168f7fa58e34e132976f9442f22e7098))
+* release please ([da9dbe9](https://github.com/PriyanshOps/Release-Please/commit/da9dbe9ea1be58406fd4351832fdbc808a59b540))
+* release please ([50c7892](https://github.com/PriyanshOps/Release-Please/commit/50c7892f22cbafc2977bc23cd07252255216aa51))
+
+
+### Bug Fixes
+
+* test 2 realease ([378cbb6](https://github.com/PriyanshOps/Release-Please/commit/378cbb6bcc6c92e3419c1076ae3f0af2eb34fcf2))
+
 ### [1.0.9](https://github.com/priyanshunamdev6/Release-Please/compare/v1.0.8...v1.0.9) (2023-08-03)
 
 
