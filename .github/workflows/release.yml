@@ -24,7 +24,7 @@ jobs:
 
   deploy-services:
     needs: release
-    uses: priyanshunamdev6/Release-Please/.github/workflows/build_deploy.yml@fix/test-release-2
+    uses: PriyanshOps/Release-Please/.github/workflows/build_deploy.yml@fix/test-release-2
     if: ${{ needs.release.outputs.release_created }}
     with:
       tag: ${{ needs.release.outputs.tag }}
