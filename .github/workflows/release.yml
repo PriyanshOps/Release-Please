@@ -5,7 +5,7 @@ name: Release Staging
 on:
   push:
     default-branch:
-      - 'fix/test-release-2'
+      - 'main'
         
 jobs:
   release:
